@@ -47,8 +47,15 @@ def main():
     for node in net5kings.nodes:
         node["value"] = len(neighbour_map[node["id"]])
         node["color"] = nodeColors[node['value']+1] 
+    # Save Graph
     net5kings.toggle_physics(True)
     html = net5kings.save_graph('NET5KINGS.html')
+    # Fix header issue
+    html_str = net5kings.html.replace('</center>', 'xxxxxxx' + '</p>\n</center>')
+    h = open('NET5KINGS.html','w')
+    h.write(html_str)
+    h.close()
+    # Streamlib display html
     with open('NET5KINGS.html', 'r') as f:
         html = f.read()
     st.subheader("Task 1. Building Interactive Network of battles of the War of 5")
