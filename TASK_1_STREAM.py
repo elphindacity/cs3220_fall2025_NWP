@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 from pyvis.network import Network
+
 def main():
     # Loading the data
     data = pd.read_csv("data/game-of-thrones-battles.csv")
@@ -9,7 +10,7 @@ def main():
     # Remove rows with any missing values (NaN)
     battles_df = battles_df.dropna()
     # Instantiate a Network object from pyvis.network.
-    net5kings = Network(heading="Task 1. Building Interactive Network of battles of the War of 5", 
+    net5kings = Network(heading=None, 
                         bgcolor="#242020",
                         font_color="white",
                         height="1000px",
@@ -45,12 +46,12 @@ def main():
     neighbour_map = net5kings.get_adj_list()
     for node in net5kings.nodes:
         node["value"] = len(neighbour_map[node["id"]])
-        node["color"] = nodeColors.get(node["value"], "gray") # default color if value is not found in nodeColors
+        node["color"] = nodeColors[node['value']+1] 
     net5kings.toggle_physics(True)
     html = net5kings.save_graph('NET5KINGS.html')
     with open('NET5KINGS.html', 'r') as f:
         html = f.read()
-    st.write("Interactive Network of battles of the War of 5")
+    st.write("Task 1. Building Interactive Network of battles of the War of 5")
     st.components.v1.html(html, height=1000)
 if __name__ == "__main__":
     main()
