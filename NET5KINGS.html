@@ -220,6 +220,9 @@ function highlightFilter(filter) {
         ></script>
 
 
+        <center>
+          <h1>Task 1. Building Interactive Network of battles of the War of 5</h1>
+        </center>
         <style type="text/css">
 
              #mynetwork {
@@ -279,7 +282,7 @@ function highlightFilter(filter) {
                   
 
                   // parsing and collecting nodes and edges from the python
-                  nodes = new vis.DataSet([{"color": "green", "font": {"color": "white"}, "id": "Balon/Euron Greyjoy", "label": "Balon/Euron Greyjoy", "shape": "dot", "value": 0}, {"color": "green", "font": {"color": "white"}, "id": "Mance Rayder", "label": "Mance Rayder", "shape": "dot", "value": 0}, {"color": "red", "font": {"color": "white"}, "id": "Stannis Baratheon", "label": "Stannis Baratheon", "shape": "dot", "value": 4}, {"color": "purple", "font": {"color": "white"}, "id": "Robb Stark", "label": "Robb Stark", "shape": "dot", "value": 2}, {"color": "green", "font": {"color": "white"}, "id": "Renly Baratheon", "label": "Renly Baratheon", "shape": "dot", "value": 0}, {"color": "orange", "font": {"color": "white"}, "id": "Joffrey/Tommen Baratheon", "label": "Joffrey/Tommen Baratheon", "shape": "dot", "value": 1}]);
+                  nodes = new vis.DataSet([{"color": "orange", "font": {"color": "white"}, "id": "Robb Stark", "label": "Robb Stark", "shape": "dot", "value": 2}, {"color": "green", "font": {"color": "white"}, "id": "Joffrey/Tommen Baratheon", "label": "Joffrey/Tommen Baratheon", "shape": "dot", "value": 1}, {"color": "gold", "font": {"color": "white"}, "id": "Stannis Baratheon", "label": "Stannis Baratheon", "shape": "dot", "value": 4}, {"color": "blue", "font": {"color": "white"}, "id": "Mance Rayder", "label": "Mance Rayder", "shape": "dot", "value": 0}, {"color": "blue", "font": {"color": "white"}, "id": "Balon/Euron Greyjoy", "label": "Balon/Euron Greyjoy", "shape": "dot", "value": 0}, {"color": "blue", "font": {"color": "white"}, "id": "Renly Baratheon", "label": "Renly Baratheon", "shape": "dot", "value": 0}]);
                   edges = new vis.DataSet([{"arrows": "to", "from": "Joffrey/Tommen Baratheon", "title": "Battle of the Golden Tooth, Battle of Riverrun, Sack of Winterfell, Battle of the Fords, The Red Wedding", "to": "Robb Stark", "width": 5}, {"arrows": "to", "from": "Robb Stark", "title": "Battle of Torrhen\u0027s Square", "to": "Balon/Euron Greyjoy", "width": 1}, {"arrows": "to", "from": "Robb Stark", "title": "Battle of the Green Fork, Battle of the Whispering Wood, Battle of the Camps, Battle of Oxcross, Sack of Harrenhal", "to": "Joffrey/Tommen Baratheon", "width": 5}, {"arrows": "to", "from": "Stannis Baratheon", "title": "Retaking of Deepwood Motte", "to": "Balon/Euron Greyjoy", "width": 1}, {"arrows": "to", "from": "Stannis Baratheon", "title": "Battle of the Blackwater, Siege of Winterfell", "to": "Joffrey/Tommen Baratheon", "width": 2}, {"arrows": "to", "from": "Stannis Baratheon", "title": "Battle of Castle Black", "to": "Mance Rayder", "width": 1}, {"arrows": "to", "from": "Stannis Baratheon", "title": "Siege of Storm\u0027s End", "to": "Renly Baratheon", "width": 1}]);
 
                   nodeColors = {};
