@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 from pyvis.network import Network
+from bs4 import BeautifulSoup
 
 def main():
     # Loading the data
@@ -51,10 +52,19 @@ def main():
     net5kings.toggle_physics(True)
     html = net5kings.save_graph('NET5KINGS.html')
     # Fix header issue
-    html_str = net5kings.html.replace('</center>', 'xxxxxxx' + '</p>\n</center>')
-    h = open('NET5KINGS.html','w')
-    h.write(html_str)
-    h.close()
+    # Load the HTML file
+    with open("graph.html", "r") as file:
+        html = file.read()
+    # Parse the HTML
+    soup = BeautifulSoup(html, "html.parser")
+    # Find and remove the duplicate title
+    titles = soup.find_all("h1")
+    if len(titles) > 1:
+        for title in titles[1:]:
+            title.decompose()
+    # Save the modified HTML
+    with open("graph.html", "w") as file:
+        file.write(str(soup))
     # Streamlib display html
     with open('NET5KINGS.html', 'r') as f:
         html = f.read()
