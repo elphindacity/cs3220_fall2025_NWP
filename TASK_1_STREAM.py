@@ -51,6 +51,7 @@ def main():
     # Save Graph
     net5kings.toggle_physics(True)
     html = net5kings.save_graph('NET5KINGS.html')
+
     # Fix header issue
     # Load the HTML file
     with open('NET5KINGS.html', "r") as file:
@@ -65,6 +66,8 @@ def main():
     # Save the modified HTML
     with open('NET5KINGS.html', "w") as file:
         file.write(str(soup))
+
+        
     # Streamlib display html
     with open('NET5KINGS.html', 'r') as f:
         html = f.read()

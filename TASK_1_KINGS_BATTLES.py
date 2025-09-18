@@ -1,5 +1,6 @@
 import pandas as pd
 from pyvis.network import Network
+from bs4 import BeautifulSoup
 #   .\venv\Scripts\activate
   
 
@@ -61,4 +62,19 @@ for node in net5kings.nodes:
 
 net5kings.toggle_physics(True)
 net5kings.save_graph('NET5KINGS.html')
+
+# Fix header issue
+# Load the HTML file
+with open('NET5KINGS.html', "r") as file:
+    html = file.read()
+# Parse the HTML
+soup = BeautifulSoup(html, "html.parser")
+# Find and remove the duplicate title
+titles = soup.find_all("h1")
+if len(titles) > 1:
+    for title in titles[1:]:
+        title.decompose()
+# Save the modified HTML
+with open('NET5KINGS.html', "w") as file:
+    file.write(str(soup))
 
