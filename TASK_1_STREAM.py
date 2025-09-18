@@ -10,7 +10,7 @@ def main():
     # Remove rows with any missing values (NaN)
     battles_df = battles_df.dropna()
     # Instantiate a Network object from pyvis.network.
-    net5kings = Network(heading=None, 
+    net5kings = Network(#heading=None, 
                         bgcolor="#242020",
                         font_color="white",
                         height="1000px",
@@ -51,7 +51,7 @@ def main():
     html = net5kings.save_graph('NET5KINGS.html')
     with open('NET5KINGS.html', 'r') as f:
         html = f.read()
-    st.write("Task 1. Building Interactive Network of battles of the War of 5")
+    st.subheader("Task 1. Building Interactive Network of battles of the War of 5")
     st.components.v1.html(html, height=1000)
 if __name__ == "__main__":
     main()
