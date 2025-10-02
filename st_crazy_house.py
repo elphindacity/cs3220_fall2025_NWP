@@ -1,7 +1,7 @@
-from src.environmentClass import Environment
-from src.agentClass import Agent
+from environmentClass import Environment
+from agentClass import Agent
 from random import randint, choice
-from src.thingClass import Thing
+from thingClass import Thing
 import os
 import streamlit as st
 
