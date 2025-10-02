@@ -1,3 +1,3 @@
-App's link for the Vacuum random Agent:
+App's link for the Crazy House!
 
-https://cs3220-2025f-lab2t1.streamlit.app/
+https://crazy-house.streamlit.app/
