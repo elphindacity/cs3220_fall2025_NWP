@@ -14,7 +14,7 @@ class GraphProblem(Problem):
         super().__init__(initial, goal)
 
         self.graph = graph # The state space
-        self.dead_states = dead
+        self.dead_states = None
 
     def actions(self, state):
         """The actions at a graph node are just its neighbors."""
