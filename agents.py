@@ -28,13 +28,13 @@
 
 # for the Assignment3
 
-from src.PS_agentPrograms import *
-from src.vacuumProblemSolvingAgentSMARTClass import VacuumProblemSolvingAgentSMART
+from PS_agentPrograms import *
+# from src.vacuumProblemSolvingAgentSMARTClass import VacuumProblemSolvingAgentSMART
 #from vacuumProblemSolvingAgentShowClass import VacuumProblemSolvingAgentDraw
-from src.navProblemSolvingAgentClass import navProblemSolvingAgent
+from navProblemSolvingAgentClass import navProblemSolvingAgent
 
-def ProblemSolvingVacuumAgentBFS(initState,vacuumWorldGraph,goalState):
-    return VacuumProblemSolvingAgentSMART(initState,vacuumWorldGraph,goalState,BestFirstSearchAgentProgram())
+# def ProblemSolvingVacuumAgentBFS(initState,vacuumWorldGraph,goalState):
+#     return VacuumProblemSolvingAgentSMART(initState,vacuumWorldGraph,goalState,BestFirstSearchAgentProgram())
 
  
 def ProblemSolvingNavAgentBFS(initState,WorldGraph,goalState):
