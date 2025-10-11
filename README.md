@@ -1,3 +1,4 @@
-App's link for the Romania Navigation Agent
+App's link 
 
-https://cs3220fall2025-lab3example.streamlit.app/
+https://goat-boat.streamlit.app/
+
