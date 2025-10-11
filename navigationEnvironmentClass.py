@@ -1,4 +1,4 @@
-from src.environmentClass import Environment
+from environmentClass import Environment
 
 
 class NavigationEnvironment(Environment):

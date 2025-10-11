@@ -7,10 +7,10 @@ import streamlit as st
 import streamlit.components.v1 as components # to display the HTML code
 import networkx as nx # Networkx for creating graph data
 from pyvis.network import Network # to create the graph as an interactive html object
-from src.graphClass import Graph
+from graphClass import Graph
 from MyData import my_data, print_dict, dead_states, my_data2, my_data3
-from src.agents import ProblemSolvingNavAgentBFS
-from src.naigationEnvironmentClass import NavigationEnvironment
+from agents import ProblemSolvingNavAgentBFS
+from navigationEnvironmentClass import NavigationEnvironment
 
 
 # FUNCTIONS
