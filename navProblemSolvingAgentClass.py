@@ -1,7 +1,7 @@
 import collections
 
-from src.problemSolvingAgentProgramClass import SimpleProblemSolvingAgentProgram
-from src.graphProblemClass import GraphProblem
+from problemSolvingAgentProgramClass import SimpleProblemSolvingAgentProgram
+from graphProblemClass import GraphProblem
 
 class navProblemSolvingAgent(SimpleProblemSolvingAgentProgram):
   def __init__(self, initial_state=None, dataGraph=None, goal=None, program=None):
