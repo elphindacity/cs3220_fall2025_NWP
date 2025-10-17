@@ -1,5 +1,4 @@
-romaniaData=dict(
-    Arad=dict(Zerind=75, Sibiu=140, Timisoara=118),
+romaniaData=dict(Arad=dict(Zerind=75, Sibiu=140, Timisoara=118),
     Bucharest=dict(Urziceni=85, Pitesti=101, Giurgiu=90, Fagaras=211),
     Craiova=dict(Drobeta=120, Rimnicu=146, Pitesti=138),
     Drobeta=dict(Mehadia=75),

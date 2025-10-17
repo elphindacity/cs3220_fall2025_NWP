@@ -10,6 +10,7 @@ class navProblemSolvingAgent(SimpleProblemSolvingAgentProgram):
     self.goal=goal
     
     self.performance=len(dataGraph.nodes())
+    print(self.performance)
     
 
     if program is None or not isinstance(program, collections.abc.Callable):

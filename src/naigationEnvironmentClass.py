@@ -1,7 +1,7 @@
 from src.environmentClass import Environment
 
 
-class NavigationEnvironment(Environment):
+class MazeNavigationEnvironment(Environment):
   def __init__(self, navGraph):
     super().__init__()
     self.status = navGraph

@@ -34,13 +34,6 @@ vacuumWorld = (dict(
     CCR=dict(Suck=CCR, Left=CCL, Right=CCR)
 ))
 
-def print_dict(dict):
-    for key, val in dict.items():
-        print(f"{key} : {val}")
-    print("")
-
-print_dict(vacuumWorld)
-
 # vacuumWorldDict={
 #   DDL:
 #     {

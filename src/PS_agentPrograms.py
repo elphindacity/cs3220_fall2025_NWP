@@ -19,22 +19,25 @@ def BestFirstSearchAgentProgram(f=None):
       #print(node.state)
       frontier = PriorityQueue()
       frontier.put((1,node))
+      print(f"The {node} is being pushed to frontier ...")
       #node.color=nodeColors["frontier"]
       reached = {problem.initial:node}
 
       while frontier:
         node = frontier.get()[1]
         #node.color=nodeColors["expanded"]
-        print(node)
+        print(f"The {node} is being extracted from frontier ...")
 
         if problem.goal_test(node.state):
           node.color=nodeColors["goal"]
+          print(f"We have found our goal:  {node}!")
           return node
 
         #reached.add(node.state)
         for child in node.expand(problem):
             if child.state not in reached or child.path_cost<reached[child.state].path_cost:
                 frontier.put((1,child))
+                print(f"The child {child} is being pushed to frontier ...")
                 #child.color=nodeColors["frontier"]
                 reached.update({child.state:child})
             
@@ -44,6 +47,12 @@ def BestFirstSearchAgentProgram(f=None):
     return program
   
  
+def IDSearchAgentProgram(f=None):
+  def program(problem):
+    pass
+    
+ 
+      
 
 
 
